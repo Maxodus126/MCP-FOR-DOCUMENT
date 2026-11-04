@@ -183,7 +183,7 @@ async function buildConvertedBytes(job: Extract<ParserJob, { kind: "convert" }>,
       ? buildCsvBuffer(data.headers, data.rows)
       : await buildXlsxBuffer(job.sheetName ?? "Sheet1", data.headers, data.rows);
   }
-  const md = await extractDocumentMarkdown(buffer, job.sourceExtension, config);
+  const md = truncateText(await extractDocumentMarkdown(buffer, job.sourceExtension, config), config.maxInputChars).text;
   return target === "pdf" ? await buildPdfBuffer(md) : await buildDocxBuffer(md);
 }
 

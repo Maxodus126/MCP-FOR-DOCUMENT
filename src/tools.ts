@@ -207,6 +207,9 @@ export function createDocumentToolHandlers(config: AppConfig, allowedRoots: stri
       if (!columns.length || columns.length > EXCEL_OUTPUT_COLUMNS) {
         throw new AppError("EXCEL_TOO_WIDE", `Harus memiliki 1–${EXCEL_OUTPUT_COLUMNS} kolom.`);
       }
+      if (columns.some((column) => column.trim() === "")) {
+        throw new AppError("EXCEL_INVALID_COLUMN", "Nama kolom tidak boleh kosong.");
+      }
       if (rows.length > 5_000) throw new AppError("EXCEL_TOO_MANY_ROWS", "Maksimal 5.000 baris data.");
       if (rows.some((row) => row.length > EXCEL_OUTPUT_COLUMNS)) {
         throw new AppError("EXCEL_TOO_WIDE", `Setiap baris maksimal ${EXCEL_OUTPUT_COLUMNS} kolom.`);
