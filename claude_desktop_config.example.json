@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "universal-document-reader": {
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\MCP\\document-mcp-server-v3\\dist\\index.js"
+      ],
+      "env": {
+        "ALLOWED_DIRS": "C:\\Users\\YOUR_USER\\Documents;D:\\Shared\\Reports",
+        "MAX_FILE_SIZE_MB": "50",
+        "MAX_OUTPUT_CHARS": "100000",
+        "MAX_CONCURRENT_TOOLS": "1",
+        "MAX_QUEUED_TOOLS": "16",
+        "MAX_QUEUE_WAIT_MS": "30000",
+        "MAX_PROCESSING_TIMEOUT_MS": "60000",
+        "WORKER_OLD_SPACE_MB": "384",
+        "WORKER_SEMI_SPACE_MB": "16",
+        "MAX_ZIP_EXPANDED_MB": "100",
+        "MAX_ZIP_ENTRIES": "2000",
+        "MAX_ZIP_COMPRESSION_RATIO": "100",
+        "MAX_EXCEL_SCAN_ROWS": "20000",
+        "MAX_EXCEL_SCAN_COLUMNS": "50",
+        "MAX_PDF_PAGES": "1000"
+      }
+    }
+  }
+}

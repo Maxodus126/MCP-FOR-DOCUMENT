@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22']   # 20 = minimum, 22 = LTS direkomendasikan
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      - name: Install dependency (reproducible)
+        run: npm ci
+
+      - name: Siapkan direktori izin untuk doctor/smoke
+        run: mkdir -p "$RUNNER_TEMP/dokumen-test"
+
+      - name: Verifikasi penuh (typecheck + test + build + doctor + smoke)
+        env:
+          ALLOWED_DIRS: ${{ runner.temp }}/dokumen-test
+        run: npm run verify
+
+      - name: Audit keamanan dependency (informatif, tidak menggagalkan build)
+        continue-on-error: true
+        run: npm audit --omit=dev
