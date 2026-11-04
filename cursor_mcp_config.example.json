@@ -5,6 +5,7 @@
       "args": ["C:/MCP/document-mcp-server-v3/dist/index.js"],
       "env": {
         "ALLOWED_DIRS": "C:/Users/YOUR_USER/Documents",
+        "ALLOWED_OUTPUT_DIRS": "C:/Users/YOUR_USER/Documents/Output",
         "MAX_FILE_SIZE_MB": "50",
         "MAX_OUTPUT_CHARS": "100000",
         "MAX_CONCURRENT_TOOLS": "1",

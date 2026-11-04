@@ -82,8 +82,10 @@ Contoh `.env` Windows:
 
 ```dotenv
 ALLOWED_DIRS=C:/Users/NamaAnda/Documents;D:/Shared/Reports
+ALLOWED_OUTPUT_DIRS=C:/Users/NamaAnda/Documents/Output;D:/Shared/Output
 MAX_FILE_SIZE_MB=50
 MAX_OUTPUT_CHARS=100000
+MAX_INPUT_CHARS=100000
 MAX_CONCURRENT_TOOLS=1
 MAX_QUEUED_TOOLS=16
 MAX_QUEUE_WAIT_MS=30000

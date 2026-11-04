@@ -1,8 +1,25 @@
 {
   "name": "universal-document-reader-mcp",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
-  "description": "Secure, per-job child-process isolated, token-efficient MCP server for PDF, DOCX, XLSX and CSV documents",
+  "description": "Secure, per-job child-process isolated, token-efficient MCP server for PDF, DOCX, XLSX and CSV documents — baca, tulis, dan konversi",
+  "license": "MIT",
+  "author": "Maxodus126",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maxodus126/MCP-FOR-DOCUMENT.git"
+  },
+  "keywords": [
+    "mcp",
+    "document",
+    "pdf",
+    "docx",
+    "xlsx",
+    "csv",
+    "converter",
+    "claude",
+    "cursor"
+  ],
   "type": "module",
   "engines": {
     "node": ">=20.19.0",

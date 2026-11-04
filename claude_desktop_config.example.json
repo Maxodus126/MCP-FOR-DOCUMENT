@@ -7,6 +7,7 @@
       ],
       "env": {
         "ALLOWED_DIRS": "C:\\Users\\YOUR_USER\\Documents;D:\\Shared\\Reports",
+        "ALLOWED_OUTPUT_DIRS": "C:\\Users\\YOUR_USER\\Documents\\Output;D:\\Shared\\Output",
         "MAX_FILE_SIZE_MB": "50",
         "MAX_OUTPUT_CHARS": "100000",
         "MAX_CONCURRENT_TOOLS": "1",
