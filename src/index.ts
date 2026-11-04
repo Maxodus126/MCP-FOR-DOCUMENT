@@ -16,7 +16,7 @@ const moduleDirectory = path.dirname(fileURLToPath(import.meta.url));
 // .env dicari relatif terhadap source/dist, bukan process.cwd() milik MCP client.
 dotenv.config({ path: path.resolve(moduleDirectory, "../.env"), override: false });
 
-const server = new McpServer({ name: "universal-document-reader", version: "3.0.0" });
+const server = new McpServer({ name: "universal-document-reader", version: "3.1.0" });
 let shuttingDown = false;
 // Guard against accidental console output from dependencies corrupting STDIO JSON-RPC.
 console.log = (...args: unknown[]) => console.error(...args);
@@ -172,7 +172,7 @@ async function main(): Promise<void> {
 
   await server.connect(new StdioServerTransport());
   logEvent({
-    event: "server.ready", version: "3.0.0", allowedRoots: allowedRoots.length,
+    event: "server.ready", version: "3.1.0", allowedRoots: allowedRoots.length,
     maxFileSizeMb: config.maxFileSizeMb, maxConcurrentTools: config.maxConcurrentTools,
     maxProcessingTimeoutMs: config.maxProcessingTimeoutMs, maxQueueWaitMs: config.maxQueueWaitMs, workerOldSpaceMb: config.workerOldSpaceMb, workerSemiSpaceMb: config.workerSemiSpaceMb,
   });
