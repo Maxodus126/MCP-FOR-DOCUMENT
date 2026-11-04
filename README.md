@@ -1,5 +1,7 @@
 # Universal Document Reader MCP Server v3.0
 
+[![CI](https://github.com/Maxodus126/MCP-FOR-DOCUMENT/actions/workflows/ci.yml/badge.svg)](https://github.com/Maxodus126/MCP-FOR-DOCUMENT/actions/workflows/ci.yml)
+
 MCP server lokal berbasis **Node.js 22 LTS, TypeScript, dan SDK resmi `@modelcontextprotocol/sdk`**. Server menyediakan lima tools read-only untuk membaca metadata, mengekstrak teks, dan mencari konten PDF, DOCX, XLSX, serta CSV.
 
 Transport default adalah **STDIO** untuk Claude Desktop, Cursor, dan MCP client yang mendukung STDIO.
